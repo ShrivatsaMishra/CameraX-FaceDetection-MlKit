@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         btnSwitch.setOnClickListener {
             cameraManager.changeCameraSelector()
         }
+
     }
 
     override fun onRequestPermissionsResult(

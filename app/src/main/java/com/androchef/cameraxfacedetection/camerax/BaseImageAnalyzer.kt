@@ -8,7 +8,6 @@ import com.google.android.gms.tasks.Task
 import com.google.mlkit.vision.common.InputImage
 
 abstract class BaseImageAnalyzer<T> : ImageAnalysis.Analyzer {
-
     abstract val graphicOverlay: GraphicOverlay
 
     @SuppressLint("UnsafeExperimentalUsageError")

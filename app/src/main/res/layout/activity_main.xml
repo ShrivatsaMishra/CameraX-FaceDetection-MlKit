@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -18,14 +20,20 @@
             android:id="@+id/previewView_finder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:scaleType="fillCenter" />
+            app:scaleType="fillCenter" >
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+        </androidx.camera.view.PreviewView>
 
         <com.androchef.cameraxfacedetection.camerax.GraphicOverlay
             android:id="@+id/graphicOverlay_finder"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </FrameLayout>
-
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSwitch"

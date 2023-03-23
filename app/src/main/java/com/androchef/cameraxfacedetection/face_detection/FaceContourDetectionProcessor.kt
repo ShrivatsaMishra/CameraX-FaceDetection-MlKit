@@ -1,6 +1,7 @@
 package com.androchef.cameraxfacedetection.face_detection
 
 import android.graphics.Rect
+import android.media.FaceDetector
 import android.util.Log
 import com.androchef.cameraxfacedetection.camerax.BaseImageAnalyzer
 import com.androchef.cameraxfacedetection.camerax.GraphicOverlay
@@ -42,10 +43,13 @@ class FaceContourDetectionProcessor(private val view: GraphicOverlay) :
         rect: Rect
     ) {
         graphicOverlay.clear()
+
         results.forEach {
             val faceGraphic = FaceContourGraphic(graphicOverlay, it, rect)
             graphicOverlay.add(faceGraphic)
+            Log.i("Angle", it.headEulerAngleX.toString()+" "+it.headEulerAngleY.toString()+" "+it.headEulerAngleZ.toString())
         }
+
         graphicOverlay.postInvalidate()
     }
 
